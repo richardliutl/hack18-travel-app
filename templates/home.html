@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Home Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="banner">My Travel Demo Application</h1>
+        <div class="section editor">
+            <label for="from_place">From
+                <input id="from_place" type="text" />
+            </label>
+            <br />
+            <label for="to_place">To
+                <input id="to_place" type="text" />
+            </label>
+            <br />
+            <button id="submit">Submit</button>
+            <button id="graph">Update Graph</button>
+        </div>
+    </div>
+    <div class="chart-container">
+        <canvas id="chart"></canvas>
+    </div>
+</body>
+<script src="static/js/home.js"></script>
+</html>
