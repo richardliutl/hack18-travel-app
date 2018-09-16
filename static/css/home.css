@@ -7,6 +7,10 @@
  body, .ui-btn {
      font-family: Roboto;
  }
+
+ body, html {
+    height: 100%;
+}
  
  .container {
      padding: 10px;
@@ -72,6 +76,26 @@
  td {
      text-align: center;
  }
+
+ .bg {
+    /* The image used */
+    /* background-image: url("http://wallpaperswide.com/download/boeing_787_dreamliner_2-1920x1080.html?dw_url=download%2Fboeing_787_dreamliner_2-&dw_ratio=hd&dlw_block_wide=1440x900&dlw_block_hd=1920x1080&dlw_block_standard=1152x768&dlw_block_mobile=400x240, http://wallpaperswide.com/wallite/boeing_787_dreamliner_2.html"); */
+    background-image: url("../bg.jpg");
+    
+    /* Half height */
+    height: 30%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo img{
+    float:left;
+    widows: 150px;
+    height: auto;
+}
  
  .error {
      width: 50%;

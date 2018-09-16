@@ -8,7 +8,9 @@ var submitPlaces = function(from_place, to_place) {
     else {
       var price_data = JSON.parse(this.responseText);
       console.log(price_data)
-      updateGraph(price_data)
+      if(updateGraph(price_data)) {
+        window.scrollTo(0,document.body.scrollHeight);
+      }
     }
   };
   var requestUrl = `api/places?from_place=${from_place}&to_place=${to_place}`;
@@ -55,6 +57,8 @@ var updateGraph = function(price_data) {
     options: options,
     data: data
   });
+
+  return 1;
 };
   
 document.addEventListener('DOMContentLoaded', function() {
@@ -65,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('graph').addEventListener('click', function() {
-    updateGraph([[0,0], [0,0]]);
-  });
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   document.getElementById('graph').addEventListener('click', function() {
+//     updateGraph([[0,0], [0,0]]);
+//   });
+// });

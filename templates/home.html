@@ -1,36 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Application Home Page</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="static/css/home.css">
-    <script
-      src="http://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous">
-    </script>
+
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <link rel="stylesheet" href="static/css/home.css">
+        <script
+          src="http://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous">
+        </script>
+    </head>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebsiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-bed"></span> Bed</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-plane"></span> Flights</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-road"></span> Car Rental</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
+
+    <body>
+        <div class="bg"></div>
+    </body>
+
     <div class="container">
-        <h1 class="banner">My Travel Demo Application</h1>
-        <div class="section editor">
-            <label for="from_place">From
-                <input id="from_place" type="text" />
-            </label>
-            <br />
-            <label for="to_place">To
-                <input id="to_place" type="text" />
-            </label>
-            <br />
-            <button id="submit">Submit</button>
-            <!-- <button id="graph">Update Graph</button> -->
+        <div class="page-header">
+            <h1>WebsiteName</h1>
+        </div>
+
+        <form>
+
+            <div class="form-group">
+                <label for="from_place">From</label>
+                <input type="from_place" class="form-control" id="from_place" value="BOS (Boston)">
+
+            </div>
+            <div class="form-group">
+                <label for="to_place">To</label>
+                <input type="to_place" class="form-control" id="to_place" placeholder="Destination">
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Show all options </label>
+
+                <p></p>
+
+                <div class="container">
+                    <button id="submit" class="btn btn-info">
+                        <span class="glyphicon glyphicon-search"></span> Search
+                    </button>
+                </div>
+
+            </div>
+            <p></p>
+
+        </form>
+        
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
         </div>
     </div>
-    <div class="chart-container">
-        <canvas id="chart"></canvas>
-    </div>
+
 </body>
 <script src="static/js/home.js"></script>
 </html>
