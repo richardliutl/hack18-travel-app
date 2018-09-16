@@ -37,16 +37,17 @@ var updateGraph = function(price_data, to_place) {
 
   var options = {
     maintainAspectRatio: false,
-    legend: {
-      display: false
-    },
     scales: {
       yAxes: [{
         stacked: true,
         gridLines: {
           display: true,
           color: "rgba(255,99,132,0.2)"
-        } 
+        },
+        scaleLabel: {
+          display: true,
+          labelString: '($)'
+        }
       }],
       xAxes: [{
         gridLines: {
