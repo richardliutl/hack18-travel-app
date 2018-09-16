@@ -37,6 +37,9 @@ var updateGraph = function(price_data, to_place) {
 
   var options = {
     maintainAspectRatio: false,
+    legend: {
+      display: false
+    },
     scales: {
       yAxes: [{
         stacked: true,
