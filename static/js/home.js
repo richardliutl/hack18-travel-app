@@ -46,7 +46,7 @@ var updateGraph = function(price_data, to_place) {
         },
         scaleLabel: {
           display: true,
-          labelString: '($)'
+          labelString: 'USD ($)'
         }
       }],
       xAxes: [{
