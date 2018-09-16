@@ -8,7 +8,7 @@ var submitPlaces = function(from_place, to_place) {
     else {
       var price_data = JSON.parse(this.responseText);
       console.log(price_data)
-      if(updateGraph(price_data)) {
+      if(updateGraph(price_data, to_place)) {
         window.scrollTo(0,document.body.scrollHeight);
       }
     }
@@ -21,11 +21,11 @@ var submitPlaces = function(from_place, to_place) {
   }
 }
 
-var updateGraph = function(price_data) {
+var updateGraph = function(price_data, to_place) {
   var data = {
     labels: price_data[0],
     datasets: [{
-        label: "Dataset #1",
+        label: to_place,
         backgroundColor: "rgba(255,99,132,0.2)",
         borderColor: "rgba(255,99,132,1)",
         borderWidth: 2,
