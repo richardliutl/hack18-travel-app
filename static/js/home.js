@@ -62,7 +62,7 @@ var updateGraph = function(price_data) {
 };
   
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('submit').addEventListener('click', function() {
+  document.getElementById('submit-btn').addEventListener('click', function() {
     var from_place = document.getElementById("from_place").value;
     var to_place = document.getElementById("to_place").value;
     submitPlaces(from_place, to_place);
